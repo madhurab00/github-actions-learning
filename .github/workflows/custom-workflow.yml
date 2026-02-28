@@ -2,6 +2,7 @@ name: Custom Workflow
 on:
   push:
     branches: [develop]
+  workflow_dispatch:
 
 jobs:
   custom-job:
