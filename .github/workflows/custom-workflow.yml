@@ -7,6 +7,9 @@ on:
 jobs:
   custom-job:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: sample-app
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -18,7 +21,6 @@ jobs:
 
       - name: run npm install
         run: npm install
-        working-directory: github-actions-learning/sample-app
         
       - name: test
         run: npm test
