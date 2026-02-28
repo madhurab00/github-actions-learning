@@ -23,6 +23,14 @@ app.get('/api/hello', (req, res) => {
   });
 });
 
+app.get('/api/bye', (req, res) => {
+  const name = req.query.name || 'World';
+  res.json({
+    message: `Good bye, ${name}!`,
+    timestamp: new Date().toISOString()
+  });
+});
+
 app.get('/api/status', (req, res) => {
   res.json({
     status: 'healthy',
