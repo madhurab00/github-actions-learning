@@ -17,6 +17,7 @@ jobs:
 
       - name: run npm install
         run: npm install
+        working-directory: github-actions-learning/sample-app
         
       - name: test
         run: npm test
